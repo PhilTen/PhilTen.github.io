@@ -27,6 +27,7 @@
 
     .super,
     .venom,
+    .spider,
     .spider-man,
     .wall {
       position: fixed;
@@ -34,11 +35,11 @@
       font-size: 0;
     }
 
-    .spider-man {
+    .spider {
       left: 0;
     }
 
-    .spider-man img {
+    .spider img {
       width: 100px;
     }
 
@@ -54,7 +55,8 @@
 
     .super {
       left: 100%;
-      top: 2%;
+      top: 50%;
+      margin-top: -32px;
       bottom: auto;
       animation-delay: 1s;
     }
@@ -90,6 +92,30 @@
       }
     }
 
+
+    .spider-man {
+      left: 50%;
+      animation: swing 10s infinite;
+    }
+
+    .spider-man img {
+      width: 32px;
+    }
+
+    @keyframes swing {
+      0% {
+        top: -78px;
+      }
+
+      50% {
+        top: 0;
+      }
+
+      100% {
+        top: -78px;
+      }
+    }
+
     @media screen and (max-width: 600px) {
 
       .venom,
@@ -106,9 +132,12 @@
 
 <body>
   <div id="app">
-    <div class="super">
-      <img src="assets/img/super.png">
+    <div class="spider-man">
+      <img src="assets/img/spiderman.png">
     </div>
+    <!-- <div class="super">
+      <img src="assets/img/super.png">
+    </div> -->
     <div class="venom">
       <img src="assets/img/venom.png">
     </div>
